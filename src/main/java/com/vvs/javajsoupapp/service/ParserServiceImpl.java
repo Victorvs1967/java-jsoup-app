@@ -27,5 +27,4 @@ public class ParserServiceImpl implements ParserService {
     .map(element -> element.text())
     .collectList();
   }
-
 }
