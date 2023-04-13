@@ -15,8 +15,8 @@ public class ParserRouter {
   @Bean
   public RouterFunction<ServerResponse> parserRouterFunction(ParserHandler handler) {
       return RouterFunctions.route()
-        .nest(RequestPredicates.path("/api/parse"), builder -> builder
-          .GET("/", handler::parser))
+        .nest(RequestPredicates.path("/api/parse/"), builder -> builder
+          .GET("news/", handler::parser))
         .build();
   }
 }
